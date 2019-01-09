@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="papaya.css" />
+        <script type="text/javascript" src="papaya.js"></script>
+        <title>Papaya Viewer</title>
+
+        <script type="text/javascript">
+            var params = [];
+            params["images"] = ["data/brainNoStroke_sas-3.nii.gz", "data/activationAtlasForStroke_uptoAug.nii.gz"];
+	        params["activationAtlasForStroke_uptoAug.nii.gz"] = {"min": 0, "max": 0.05, "lut": "Spectrum", "alpha": 0.6};
+        </script>
+    </head>
+
+    <body>
+        <div class="papaya" data-params="params"></div>
+    </body>
+</html>
