@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="papaya.css" />
-        <script type="text/javascript" src="papaya.js"></script>
-        <title>DeepSymNet Activations</title>
+<html>
+<head>
+<title>DeepSymNet</title>
+</head>
 
-        <script type="text/javascript">
-            var params = [];
-            params["images"] = ["data/brainNoStroke_sas-3.nii.gz", "data/activationAtlasForStroke_uptoAug.nii.gz"];
-	        params["activationAtlasForStroke_uptoAug.nii.gz"] = {"min": 0, "max": 0.05, "lut": "Spectrum", "alpha": 0.6};
-        </script>
-    </head>
+<body>
+<h1> Determining Ischemic Stroke from CT-Angiography Imaging Using Symmetry-Sensitive Convolutional Networks </h1>
+<h3>
+Arko Barman, Mehmet E. Inam, Songmi Lee, Sean Savitz, Sunil Sheth, Luca Giancardo
+</h3>
+<br>
+<br>
+<br>
+<h2> Abstract </h2>
+Acute Ischemic Stroke (AIS) is the second leading cause of death worldwide in 2015, and fifth in the United States. Neuro-imaging is routinely used in the diagnosis and management of these patients. To create a decision support method for AIS, we propose a convolutional neural network for automated detection of ischemic stroke from CT Angiography (CTA), an imaging technique that is widely available and used routinely in stroke evaluations. The network has a novel design that makes it sensitive to changes in symmetry of vascular and brain tissue texture which allows it to detect ischemic stroke from CTA brain images. The proposed model is inspired from the paradigm of Siamese networks and applied to the two brain hemispheres in parallel. We tested the model on a clinical dataset of 217 subjects, 123 controls and 94 subjects imaged less than 24 hours after stroke onset. First, we tested the ability of the network in recognizing strokes with the original images, which contain asymmetries in both vascular structures and brain tissues.  Then, we digitally removed the vasculature in order to evaluate the ability of the network to recognize strokes by analyzing brain tissue only. We achieved AUC 0.99 (CI 0.99-1.00) and AUC 0.93 (CI 0.89-0.96) on the two experiments respectively. The qualitative analysis of the network activation confirms that the model efficiently learns the vasculature and brain tissue structures in one hemisphere that does not appear in the opposite hemisphere.
 
-    <body>
-        <div class="papaya" data-params="params"></div>
-    </body>
+<br>
+<br>
+<!-- <a href="sampleBrainWithStrokeAtlasOverlay.html">Interactive visualization of stroke atlas overlaid on a control</a> -->
+<a href="strokeYesWithActivation.html">Interactive visualization of network activation for a stroke patient (Original CTA Volume)</a>
+<br>
+<a href="strokeYes_vesselsRemoved_WithActivation.html">Interactive visualization of network activation for a stroke patient (Vessels removed)</a>
+
+</body>
+
+
 </html>
